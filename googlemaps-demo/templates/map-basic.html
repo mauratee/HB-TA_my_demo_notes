@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/static/css/maps.css"/>
+  <!-- Load your JS code (code that has Google Maps Init fxn) before async script -->
+  <script src="/static/js/mapsDemo.js"></script>
+  <!-- Google Maps loading script, call after your own code -->
+  <script
+    async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFSJXYD8gYwgSkNOQl4zZb3GeCufnQlBs&callback=initMap">
+  </script>
+{% endblock %}
+
+{% block body %}
+  <header>
+    <nav>
+      <section id="links-left">
+        <a href="/map/more">Check out the other demos!</a>
+      </section>
+      <section id="links-right">
+        <a href="/">home</a>
+      </section>
+    </nav>
+  </header>
+
+  <main>
+    <section class="map">
+      <div id="map"></div>
+    </section>
+  </main>
+{% endblock %}
