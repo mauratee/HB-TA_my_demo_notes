@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Chart.js Demos{% endblock %}
+
+{% block head %}
+  {# ChartJS #}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+  {# If you want to use time scales, you have to import a date library and the Chart.js adapter #}
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.1.0/dist/chartjs-adapter-luxon.min.js"></script>
+
+  {# randomColor: generate random colors #}
+  <script src="https://cdn.jsdelivr.net/npm/randomcolor@0.6.2/randomColor.js"></script>
+{% endblock %}
+
+{% block body %}
+  <div id="site-content">
+    <h1>Chart.js</h1>
+
+    <h2>Simple Bar Chart</h2>
+    <canvas id="bar-chart"></canvas>
+
+    <h2>Bar Chart w/ Auto-Generated Colors</h2>
+    <canvas id="bar-colors"></canvas>
+
+    <h2>Line Chart w/ Time Scale</h2>
+    <canvas id="line-time"></canvas>
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script src="/static/js/charts.js"></script>
+{% endblock %}

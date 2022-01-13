@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}d3 Demos{% endblock %}
+
+{% block head %}
+  <style>
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    #basic-demo { height: 200px; }
+    #repos-per-lang { height: 150px; }
+    #force-layout { height: 500px; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+{% endblock %}
+
+{% block body %}
+  <div id="site-content">
+    <h1>d3</h1>
+
+    <h2>Basic Demo</h2>
+    <div id="basic-demo">
+      <svg></svg>
+    </div>
+
+    <h2>Active GitHub Repos per Language</h2>
+    <p>
+      The code for this demo is at
+      <code>/static/js/further-study/d3-svgGroups.js</code>
+    </p>
+    <div id="repos-per-lang"></div>
+
+    <h2>Tree Layout</h2>
+    <p>
+      The code for this demo is at
+      <code>/static/js/further-study/d3-forceLayout.js</code>
+    </p>
+    <div id="force-layout"></div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script src="/static/js/d3.js"></script>
+{% endblock %}
