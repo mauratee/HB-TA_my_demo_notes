@@ -4,9 +4,11 @@
   <link rel="stylesheet" href="/static/css/maps.css">
 
   <script src="/static/js/moreDemos.js"></script>
+
+  <!-- Added Maura's Google Maps API Key (restricted to home IP address) -->
   <script
     async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFSJXYD8gYwgSkNOQl4zZb3GeCufnQlBs&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnXgYdTZCVDtJeKFWtrgGHQ_x2kUe7zz8&callback=initMap">
   </script>
 {% endblock %}
 
@@ -19,6 +21,7 @@
           Apply Custom Style
         </button>
 
+          <!-- Added Geocoding API to Maura's API key -->
         <button id="geocode-address">
           Geocode Address
         </button>

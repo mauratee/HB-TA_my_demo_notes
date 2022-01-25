@@ -10,6 +10,25 @@ app = Flask(__name__)
 # app.config["SECRET_KEY"] = "ursusmaritimus"
 # app.jinja_env.undefined = StrictUndefined
 
+
+# If you put the API key in secrets.sh, you will ALSO need 
+# to restrict the IP address. (When/if you deploy, you will 
+# need to change the IP address from your public IP address 
+# to the IP address of your deployment server.) 
+
+# Really, it should not be necessary to put the API key in 
+# secrets.sh at all -- you should just be able to restrict 
+# the IP and then put the key directly into your HTML. Because 
+# of the IP restriction it will still be secure. However, it 
+# seems that Google may complain because it thinks your key 
+# has been exposed.
+
+# TLDR: If you use the Google Maps API, you need to restrict 
+# the IP address. You shouldn't need to put the key in 
+# secrets.sh, but you may need to do that as well in order 
+# to prevent Google from needlessly freaking out and disabling 
+# your API key.
+
 #---------------------------------------------------------------------#
 
 @app.route("/")
